@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <title>Tarea 5</title>
+  <link rel="stylesheet" href="estilos.css">
+  <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
+</head>
+<body>
+  <hr>
+  <div class="contenedor_cabecera ancho margen">
+    <div class="contenedor_imagenspa">
+      <img src="imagenes/logocabecera.jpg" alt="">
+    </div>
+    <div class="contenedor_imagenesredes">
+      <a href="#"><img src="imagenes/icono_facebook.jpg" alt=""></a>
+      <a href="#"><img src="imagenes/icono_instagram.jpg" alt=""></a>
+      <a href="#"><img src="imagenes/icono_twitter.jpg" alt=""></a>
+    </div>
+
+  </div>
+
+  <div class="contenedor_menu ancho margen centrar">
+
+    <a href="#">GALERIA</a>
+    <a href="#">PRECIOS</a>
+    <a href="#">CONTACTANOS</a>
+    <a href="#">EQUIPO</a>
+
+  </div>
+  <br>
+  <div class="contenedor_central ancho centrar">
+    <h1>PROMOCIONES DE MARZO</h1> 
+    <p>Se acerca la epoca de playa y por eso preparamos estas dos promociones ideales para ti.</p>
+
+    <div class="contenedor_botones">
+      <a href="#" class="btn_promocion">Solicitar Promocion</a>
+      <a target="_blank" href="https://www.youtube.com/watch?si=TOqUGmWLNQwtsvWN&v=w4qaODLR_Xg&feature=youtu.be" class="btn_transparente">Ver Video</a>
+    </div>
+  </div>
+
+  <div class="contenedor_productos ancho margen">
+    <div class="informacion_productos">
+      <h2 class="negritas">Los productos Science of Beauty</h2>
+      <br>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam, porro, a blanditiis id ex explicabo repellendus repellat magnam molestias harum, sint nesciunt eveniet dolore corporis exercitationem! Dolor, consequuntur eos maxime sed incidunt magnam, blanditiis sit quae numquam rem aspernatur ratione, sint eveniet fuga soluta architecto,</p>
+    </div>
+
+    <div class="contenedor_imgvelas">
+      <img src="imagenes/fotovelas.jpg" alt="">
+    </div>
+
+  </div>
+
+  <div class="contenedor_busquedatalentos ancho centrar margen">
+    <h2 class="subtitulo negritas">Buscamos talento para integrarlos a nuestro equipo</h2> <br>
+    <div class="contenedor_imgjabones">
+      <img src="imagenes/fotoaromatizante.jpg" alt="">
+    </div>
+
+    <div class="contenedor_puestostrabajo">
+      <h4>Puesto de trabajo para recepcionista</h4>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, voluptate quidem! Corrupti est omnis velit a obcaecati, dignissimos ipsum possimus Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere, sit?!</p>
+      <br>
+      <h4>Puesto de trabajo para recepcionista</h4>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, voluptate quidem! Corrupti est omnis velit a obcaecati, dignissimos ipsum possimus! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam, perspiciatis.</p>
+      <br>
+      <h4>Puesto de trabajo para recepcionista</h4>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, voluptate quidem! Corrupti est omnis velit a obcaecati, dignissimos ipsum possimus! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem, maiores.</p>
+    </div>
+  </div>
+
+  <div class="contenedor_final margen ancho">
+    <div class="formulario_noticias">
+      <h2>Recibe noticias y promociones <br> de SPA SALON</h2>
+      <p>Un lugar para consentirte de pies a cabeza <br> Servicio de salon de estetica y Spa personalizado</p> 
+      <a href="tel:9994208871"><span class="rosa negritas">TELEFONO:</span> 999 420 8871</a> <br>
+      <a href="mailto:info@spasalon.com"><span class="rosa negritas">CORREO:</span> info@spasalon.com</a> <br><br>
+
+      <form action="guardar.php" method="get" id="formulario" name="formulario">
+
+        <label for="email">Tu direccion de correo electronico</label> <br>
+        <input class="elementos" type="email" name="email" id="email" placeholder="*tunombre@example.com"> <br>
+
+        <button class="btn_enviar" type="button" id="enviar" name="enviar">Enviar</button>
+      </form>
+    </div>
+
+    <div class="contenedor_video">
+      <h2>Nuestras Instalaciones</h2> <br>
+
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/w4qaODLR_Xg?si=JCslhQPmLxHNOb9b" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <div class="contenedor_pie ancho margen">
+
+    <div class="contenedor_logospa">
+      <img src="imagenes/logo_spa.png" alt="">
+    </div>
+    <div class="contenedor_infoalumno">
+      <p class="negritas">Eduardo Yahel Ruiz Lopez <br> Programacion Web <br> 7SA</p>
+    </div>
+  </div>
+  <hr>
+
+<script>
+$("#enviar").click(function()
+    {
+  //Email
+        if ($("#email").val().trim() == ''){
+            alert("Escribe tu correo electrónico");
+            $("#email").focus();
+            return false;
+        }
+
+        let expresionCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!expresionCorreo.test($("#email").val().trim())){
+            alert("Escribe un correo electrónico válido");
+            $("#email").focus();
+            return false;
+        }
+
+        $("#formulario").submit();
+         })
+</script>
+ 
+
+</body>
+</html>
