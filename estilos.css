@@ -210,3 +210,6 @@ hr{
   color: #ff3281;
   text-align: right;
 }
+.elementos:focus{
+  background-color: #e7c8d4;
+}
